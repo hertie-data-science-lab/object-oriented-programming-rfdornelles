@@ -9,12 +9,12 @@ from abc import ABCMeta, abstractmethod
 import numpy as np
 
 class Creature(metaclass=ABCMeta):
-    
+    pass
   
         
 class Bear(Creature):
-
+    pass
  
         
 class Fish(Creature):
-    
+    pass

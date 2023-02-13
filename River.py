@@ -11,8 +11,8 @@ from Creatures import Fish
 class River:
     
     def __init__(self, n_room):
-       
-        
+       # test
+       pass
        
     def display(self):
         print("===================")
