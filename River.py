@@ -11,7 +11,10 @@ from Creatures import Fish
 class River:
     
     def __init__(self, n_room):
-       # test
+       # create an ecosystem in the size n_room
+       self.eco = []
+       
+       
        pass
        
     def display(self):
@@ -19,3 +22,16 @@ class River:
         print("Ecosystem status:\n")
         print(self.eco, "\n")
         print("===================")
+        
+    # method inform_content_index
+    
+    
+    # method set_content_index
+    
+    # method filter indexes
+    
+    # method eco
+    
+    # method next_time_step - loop over iterations
+    
+    

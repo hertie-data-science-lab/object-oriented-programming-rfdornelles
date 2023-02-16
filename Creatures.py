@@ -9,10 +9,22 @@ from abc import ABCMeta, abstractmethod
 import numpy as np
 
 class Creature(metaclass=ABCMeta):
-    pass
-  
+    
+    # define attribute position
+    def __init__(self, position):
+        self._position = position
+    
+    
+    # method move
+    
+    # method generate
+        # new instance of same animal
+        # check which places are empty
+        # any empty, stop
+        # placed random where there's None 
         
 class Bear(Creature):
+    
     pass
  
         
