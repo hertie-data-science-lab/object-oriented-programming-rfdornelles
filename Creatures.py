@@ -24,7 +24,6 @@ class Creature(metaclass=ABCMeta):
         # placed random where there's None 
         
 class Bear(Creature):
-    
     pass
  
         

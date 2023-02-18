@@ -10,11 +10,24 @@ from Creatures import Fish
 
 class River:
     
-    def __init__(self, n_room):
+    def __init__(self, n_room = 5):
        # create an ecosystem in the size n_room
        self.eco = []
        
+       # distribute bears, fishs and None thorugh
+       # the river
+       for room in range(n_room):
+           
+           # random choice
+           random_room = np.random.choice([Bear(room), Fish(room), None])
+           
+           # add to the ecosystem
+           self.eco.append(random_room)
+           
+           #debug:
+           print(self.eco)
        
+    def initialize(self):  
        pass
        
     def display(self):
