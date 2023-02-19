@@ -25,7 +25,7 @@ class River:
            self.eco.append(random_room)
            
            #debug:
-           print(self.eco)
+           #print(self.eco)
        
     def initialize(self):  
        pass
@@ -36,15 +36,40 @@ class River:
         print(self.eco, "\n")
         print("===================")
         
-    # method inform_content_index
+    # method to inform the positions of a specific kind
+    def where_is_creature(self, kind):
+        # create a empty list to be appended
+        indexes = []
+        
+        for element in range(len(self.eco)):
+            print(type(self.eco[element]))
+            if type(self.eco[element]) == kind:
+                indexes.append(element)
+        
+        return indexes
     
+    # return where there's empty space in the river
+    def where_is_empty(self):
+        indexes = []
+        
+        for element in range(len(self.eco)):
+            if self.eco[element] is None:
+                indexes.append(element)
+        
+        return indexes
+    
+    # method get_kind
+    def get_kind(self, element):
+        
+        room = self.eco[element]
+        
+        if room is None:
+            return "Empty room"
+        else:
+            return self.eco[element].kind 
     
     # method set_content_index
-    
-    # method filter indexes
-    
-    # method eco
-    
+     
     # method next_time_step - loop over iterations
     
     
