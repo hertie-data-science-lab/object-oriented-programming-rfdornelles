@@ -7,8 +7,8 @@ Created on Sun Feb 12 18:05:41 2023
 
 from River import River
 
-river = River(5)
+river = River(100)
 river.initialize()
 river.display()
 
-#river.next_time_step(10)
+river.next_time_step(30)

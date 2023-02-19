@@ -20,9 +20,11 @@ class Creature(metaclass=ABCMeta):
     def move (self, river, current_position, new_position):
         
         if new_position < 0 or new_position > len(river.eco)-1:
+            print("Impossible moviment")
             return False
         
         if river.eco[current_position] is None:
+            print("Impossible to move empty space!")
             return False
         
         river.eco[new_position] = river.eco[current_position]
@@ -40,7 +42,10 @@ class Creature(metaclass=ABCMeta):
         # new instance of same animal
         available_places = river.where_is_empty()
         
+        print(f"      Two {kind} met and might generate other specime.")
+        
         if len(available_places) == 0:
+            print(f"Unfortunatelly, there's no free space.")
             return False
         
         random_place = np.random.choice(available_places)
@@ -49,7 +54,8 @@ class Creature(metaclass=ABCMeta):
             river.eco[random_place] = Bear(random_place)  
         else:
             river.eco[random_place] = Fish(random_place)
-            
+        
+        print(f"      {kind} geneated at room {random_place}!")    
         return True
 
         
